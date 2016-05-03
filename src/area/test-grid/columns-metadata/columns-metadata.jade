@@ -1,0 +1,32 @@
+template
+  div.container
+    div.card
+      div.card-header
+        h3 Grid columns metadata usage
+      div.card-block
+        div.row
+          div.col-lg-6
+            p When rendering the grid, it collects information about its columns by the metadata given to the model. The metadata can be passed by 
+              ul
+                li using html attributes
+                  p Usage:
+                    code.lamgiage-js &lt;grid heading='name' field='name' fitler='select'&gt;&lt;/grid&gt;
+                li  binding an array of columns objects to an attribute
+                  p Usage:
+                    code.language-js &lt;grid columns-metadata.bind="yourArray"&gt;&lt;/grid&gt;
+          div.col-lg-6
+             div.card
+               div.card-header
+                 h4 Most common column metadata properties(attributes)
+               div.card-block
+                 pre
+                   code.language-js
+                     | {
+                     |   heading: 'Name'
+                     |   field: 'name'
+                     |   filter: 'input'
+                     |   html: 'aloha'
+                     | }
+        grid(data.bind="data", height="150", columns-metadata.bind="metadata", show-filters.bind="true")
+          grid-row
+            grid-col

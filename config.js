@@ -7,8 +7,10 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   map: {
+    "CodeSeven/toastr": "github:CodeSeven/toastr@2.1.2",
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.2.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.2.0",
+    "aurelia-components/grid": "github:aurelia-components/grid@develop",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.2.1",
     "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.1.2.0",
@@ -23,8 +25,17 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "fetch": "github:github/fetch@0.11.0",
     "font-awesome": "npm:font-awesome@4.5.0",
+    "service": "features/service/index",
     "text": "github:systemjs/plugin-text@0.0.3",
     "utils": "features/utils/index",
+    "moment": "npm:moment@2.13.0",
+    "github:CodeSeven/toastr@2.1.2": {
+      "css": "github:systemjs/plugin-css@0.1.21",
+      "jquery": "github:components/jquery@2.2.1"
+    },
+    "github:aurelia-components/grid@develop": {
+      "moment": "npm:moment@2.13.0"
+    },
     "github:twbs/bootstrap@3.3.6": {
       "jquery": "github:components/jquery@2.2.1"
     },

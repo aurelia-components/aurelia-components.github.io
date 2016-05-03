@@ -1,6 +1,6 @@
 export class ChildRouter {
-  constructor(session) {
-    this.session = session;
+  constructor() {
+    // this.session = session;
     this.navModel = {};
   }
 
@@ -11,9 +11,9 @@ export class ChildRouter {
   }
 
   checkAccess(navModel) {
-    if (navModel.config.accessRight) {
-      return this.session.userHasAccessRight(navModel.config.accessRight);
-    }
+    // if (navModel.config.accessRight) {
+    //   return this.session.userHasAccessRight(navModel.config.accessRight);
+    // }
 
     return true;
   }

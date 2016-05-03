@@ -5,6 +5,7 @@ var runSequence = require('run-sequence');
 var pug = require('gulp-pug');
 var moment = require('moment');
 var colors = require('colors');
+var path = require('path');
 
 // outputs changes to files to the console
 function reportChange(event) {
