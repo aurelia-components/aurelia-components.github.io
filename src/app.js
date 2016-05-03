@@ -1,11 +1,18 @@
+import {inject} from 'aurelia-framework';
+import {RoutesConfig} from './routes-config';
+
+@inject(RoutesConfig)
 export class App {
+  constructor(routesConfig) {
+    this.routesConfig = routesConfig;
+  }
+
   configureRouter(config, router) {
-    config.title = 'Aurelia';
-    config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
-    ]);
+    //config.options.pushState = true;
+    //config.title = this.i18n.tr('config.pageTitle');
+    //config.addPipelineStep('authorize', AccessRightsAuthorizeStep);
+    config.map(this.routesConfig.getRoutes());
+    config.mapUnknownRoutes('./not-found', 'not-found');
 
     this.router = router;
   }

@@ -1,0 +1,10 @@
+template
+  nav.navbar.navbar-fixed-top.navbar-dark.bg-primary
+    a.nav.navbar-brand(href="#") Examples
+
+    ul.nav.navbar-nav
+        template(repeat.for="navModel of router.navigation")
+          li.nav-item(class="${ navModel.isActive ? 'active' : '' }")
+            a.nav-link(href.bind="navModel.href", title.bind="navModel.title")
+              i.fa(class.bind="navModel.config.faicon", if.bind="navModel.config.faicon") &nbsp;
+              span(if.bind="!navModel.config.iconOnly") ${navModel.title}

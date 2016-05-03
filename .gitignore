@@ -7,3 +7,5 @@ bower_components
 build/reports
 coverage
 test/e2e/dist
+src/**/*.html
+index.html

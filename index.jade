@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Aurelia
+    link(rel='stylesheet', href='jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='styles/styles.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body(aurelia-app='main')
+    .splash
+      .message Aurelia Navigation Skeleton
+      i.fa.fa-spinner.fa-spin
+    script(src='jspm_packages/system.js')
+    script(src='config.js')
+    script.
+      System.import('aurelia-bootstrapper');
