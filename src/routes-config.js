@@ -36,12 +36,12 @@ export class RoutesConfig {
     //   moduleId: './area/test-select3/test-select3',
     //   nav: true,
     //   title: 'Test Select3'
-    }, {
-      route: 'test-grid',
-      name: 'test-grid',
-      moduleId: './area/test-grid/test-grid',
-      nav: true,
-      title: 'Test Grid'
+    // }, {
+    //   route: 'test-grid',
+    //   name: 'test-grid',
+    //   moduleId: './area/test-grid/test-grid',
+    //   nav: true,
+    //   title: 'Test Grid'
     // }, {
 	 //  route: 'test-date-time-picker',
     //   name: 'test-date-time-picker',

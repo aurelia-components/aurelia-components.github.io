@@ -1,0 +1,13 @@
+
+<template>
+  <div class="row" style="height:100%">
+    <div class="col-xl-2">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-item" repeat.for="navModel of router.navigation" if.one-way="$parent.checkAccess(navModel)"><a class="nav-link ${ navModel.isActive ? 'active' : '' }" href.bind="navModel.href">${navModel.title}</a></li>
+      </ul>
+    </div>
+    <div class="col-xl-10" style="height:100%">
+      <router-view></router-view>
+    </div>
+  </div>
+</template>

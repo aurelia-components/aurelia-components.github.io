@@ -5,7 +5,7 @@ export function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     //.plugin('aurelia-animator-css')
-    .plugin('aurelia-components/grid')
+    //.plugin('aurelia-components/grid')
     .feature('features/service', (config) => {
       config.setLoggerService({
         positionClass: 'toast-top-right'

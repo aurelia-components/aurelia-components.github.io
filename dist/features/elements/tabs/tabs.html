@@ -1,0 +1,8 @@
+
+<template>
+  <ul class="nav nav-tabs m-b-1">
+    <li class="nav-item" repeat.for="tab of tabs"><a class="nav-link ${tab.active ? 'active': ''}" href="#" click.trigger="$parent.onTabClick(tab)" style.bind="tab.headingStyleObject">
+        ${tab.name | t}&nbsp;<span class="label label-pill label-default">${tab.badge}</span></a></li>
+  </ul>
+  <content></content>
+</template>
