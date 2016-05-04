@@ -7,6 +7,10 @@ var moment = require('moment');
 var colors = require('colors');
 var path = require('path');
 
+var sass = require('gulp-ruby-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+
 // outputs changes to files to the console
 function reportChange(event) {
   console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -16,12 +20,14 @@ function reportChange(event) {
 // to js, html, and css files and call the
 // reportChange method. Also, by depending on the
 // serve task, it will instantiate a browserSync session
-gulp.task('watch', ['prep'], function() {
+gulp.task('watch', ['prep'], function () {
   gulp.watch(paths.source, ['build-system', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.html, ['build-html', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.css, ['build-css']).on('change', reportChange);
   gulp.watch([paths.pug, 'index.jade'], compilePug);
-  gulp.watch(paths.style, function() {
+  gulp.watch(paths.sass, ['compile-sass']);
+  
+  gulp.watch(paths.style, function () {
     return gulp.src(paths.style)
       .pipe(browserSync.stream());
   }).on('change', reportChange);
@@ -29,9 +35,10 @@ gulp.task('watch', ['prep'], function() {
 
 gulp.task('prep', function (callback) {
   return runSequence(
-    //'rm-html',
+    'rm-html',
     'compile-pug',
-	'compile-pug-index',
+    'compile-pug-index',
+    'compile-sass',
     'serve',
     callback
   );
@@ -51,6 +58,13 @@ gulp.task('compile-pug-index', function () {
       pretty: true
     }))
     .pipe(gulp.dest('.'));
+});
+
+gulp.task('compile-sass', function () {
+  sass('scss/styles.scss', {sourcemap: true, style: 'compact'})
+    .pipe(autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('styles'));
 });
 
 var logWatchEventInfo = function (title, event) {

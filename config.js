@@ -160,7 +160,7 @@ System.config({
     }
   },
   bundles: {
-    "app-build-db14cdb6af.js": [
+    "app-build-54b0693d40.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",
       "app.js",
       "main.js",

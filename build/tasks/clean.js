@@ -10,6 +10,6 @@ gulp.task('clean', ['unbundle'], function() {
 });
 
 gulp.task('rm-html', function() {
-  return gulp.src(['**/*.html', '!jspm_packages/**/*', '!node_modules/**/*'])
+  return gulp.src(['**/*.html', '!jspm_packages/**/*', '!node_modules/**/*', '!dist/**/*'])
     .pipe(vinylPaths(del));
 });

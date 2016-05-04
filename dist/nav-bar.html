@@ -3,7 +3,7 @@
   <nav class="navbar navbar-fixed-top navbar-dark"><a class="nav navbar-brand" href="#">Examples</a>
     <ul class="nav navbar-nav">
       <template repeat.for="navModel of router.navigation">
-        <li class="nav-item ${ navModel.isActive ? 'active' : '' }"><a class="nav-link" href.bind="navModel.href" title.bind="navModel.title"><i class="fa" class.bind="navModel.config.faicon" if.bind="navModel.config.faicon">&nbsp;</i><span if.bind="!navModel.config.iconOnly">${navModel.title}</span></a></li>
+        <li class="nav-item ${ navModel.isActive ? 'active' : '' }"><a class="nav-link" href.bind="navModel.href" title.bind="navModel.title"><i class="fa" class.bind="navModel.config.favicon" if.bind="navModel.config.favicon">&nbsp;</i><span if.bind="!navModel.config.iconOnly">${navModel.title}</span></a></li>
       </template>
     </ul>
   </nav>

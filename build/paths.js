@@ -8,6 +8,7 @@ module.exports = {
   html: appRoot + '**/*.html',
   pug: appRoot + '**/*.jade', /*TODO: rename all .jade files to .pug*/
   css: appRoot + '**/*.css',
+  sass: 'scss/**/*.scss',
   style: 'styles/**/*.css',
   output: outputRoot,
   exportSrv: exportSrvRoot,

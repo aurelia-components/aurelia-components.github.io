@@ -8,3 +8,4 @@ coverage
 test/e2e/dist
 src/**/*.html
 index.html
+.sass-cache/
