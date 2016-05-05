@@ -13,7 +13,7 @@ export function configure(aurelia) {
     })
     .feature('features/utils')
     .feature('features/value-converters')
-    .feature('features/elements/tabs');
+    .plugin('aurelia-components/tabs');
 
   aurelia.start().then(a => a.setRoot());
 }

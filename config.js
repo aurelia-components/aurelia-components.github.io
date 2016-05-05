@@ -10,6 +10,7 @@ System.config({
     "CodeSeven/toastr": "github:CodeSeven/toastr@2.1.2",
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.2.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.2.0",
+    "aurelia-components/tabs": "github:aurelia-components/tabs@develop",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.2.1",
     "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.1.2.0",
@@ -160,7 +161,7 @@ System.config({
     }
   },
   bundles: {
-    "app-build-54b0693d40.js": [
+    "app-build-486df8397f.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",
       "app.js",
       "main.js",

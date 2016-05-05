@@ -73,6 +73,7 @@
       "CodeSeven/toastr": "github:CodeSeven/toastr@^2.1.2",
       "aurelia-animator-css": "npm:aurelia-animator-css@^1.0.0-beta.1.1.2",
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.1.4",
+      "aurelia-components/tabs": "github:aurelia-components/tabs@develop",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-beta.1.1.1",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.1.4",
       "aurelia-history-browser": "npm:aurelia-history-browser@^1.0.0-beta.1.1.4",
